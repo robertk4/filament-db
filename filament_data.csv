@@ -1,0 +1,7 @@
+Printer,Material,Brand,Nozzle_Temp,Bed_Temp,Speed,Notes,Affiliate_Key
+Ender 3 V2,PLA,Hatchbox,200,60,50,Standard reliable settings. Fan 100%.,pla_generic
+Ender 3 V2,PETG,Overture,240,70,40,No fan for first 3 layers. Use glue stick.,petg_generic
+Ender 3 V2,TPU,Ninjaflex,225,50,25,DISABLE RETRACTION. Print very slow.,tpu_generic
+Bambu Lab X1C,PLA-CF,Bambu Lab,220,55,200,Hardened steel nozzle required.,bambu_pla
+Bambu Lab X1C,ABS,Sunlu,260,100,300,Requires enclosure. Filter recommended.,abs_generic
+Prusa MK4,PETG,Prusament,250,85,100,Textured sheet recommended.,petg_prusa

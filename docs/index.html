@@ -1,0 +1,113 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Filament Settings Database</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    </head>
+    <body>
+        <h1>🖨️ Filament Settings DB</h1>
+        <p>Stop clogging your nozzle. Validated settings for Ender 3, Bambu, and Prusa.</p>
+        <input type="text" id="search" onkeyup="filterTable()" placeholder="Search for printer or material...">
+        
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>Printer</th>
+                    <th>Material</th>
+                    <th>Brand</th>
+                    <th>Nozzle (&deg;C)</th>
+                    <th>Bed (&deg;C)</th>
+                    <th>Notes</th>
+                    <th>Buy</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+        <tr>
+            <td><strong>Ender 3 V2</strong></td>
+            <td>PLA</td>
+            <td>Hatchbox</td>
+            <td>200</td>
+            <td>60</td>
+            <td>Standard reliable settings. Fan 100%.</td>
+            <td><a href="https://amazon.com/s?k=hatchbox+pla+1.75&tag=robertk4-20" target="_blank"> Check Price &rarr;</a></td>
+        </tr>
+        
+        <tr>
+            <td><strong>Ender 3 V2</strong></td>
+            <td>PETG</td>
+            <td>Overture</td>
+            <td>240</td>
+            <td>70</td>
+            <td>No fan for first 3 layers. Use glue stick.</td>
+            <td><a href="https://amazon.com/s?k=overture+petg+filament&tag=robertk4-20" target="_blank"> Check Price &rarr;</a></td>
+        </tr>
+        
+        <tr>
+            <td><strong>Ender 3 V2</strong></td>
+            <td>TPU</td>
+            <td>Ninjaflex</td>
+            <td>225</td>
+            <td>50</td>
+            <td>DISABLE RETRACTION. Print very slow.</td>
+            <td><a href="https://amazon.com/s?k=ninjaflex+tpu&tag=robertk4-20" target="_blank"> Check Price &rarr;</a></td>
+        </tr>
+        
+        <tr>
+            <td><strong>Bambu Lab X1C</strong></td>
+            <td>PLA-CF</td>
+            <td>Bambu Lab</td>
+            <td>220</td>
+            <td>55</td>
+            <td>Hardened steel nozzle required.</td>
+            <td><a href="https://amazon.com/s?k=bambu+lab+pla+cf&tag=robertk4-20" target="_blank"> Check Price &rarr;</a></td>
+        </tr>
+        
+        <tr>
+            <td><strong>Bambu Lab X1C</strong></td>
+            <td>ABS</td>
+            <td>Sunlu</td>
+            <td>260</td>
+            <td>100</td>
+            <td>Requires enclosure. Filter recommended.</td>
+            <td><a href="https://amazon.com/s?k=sunlu+abs+filament&tag=robertk4-20" target="_blank"> Check Price &rarr;</a></td>
+        </tr>
+        
+        <tr>
+            <td><strong>Prusa MK4</strong></td>
+            <td>PETG</td>
+            <td>Prusament</td>
+            <td>250</td>
+            <td>85</td>
+            <td>Textured sheet recommended.</td>
+            <td><a href="https://amazon.com/s?k=prusament+petg&tag=robertk4-20" target="_blank"> Check Price &rarr;</a></td>
+        </tr>
+        
+            </tbody>
+        </table>
+        
+        <script>
+        function filterTable() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("search");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("dataTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }       
+            }
+        }
+        </script>
+    </body>
+    </html>
+    
