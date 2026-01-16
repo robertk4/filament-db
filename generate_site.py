@@ -32,6 +32,7 @@ def generate():
     <html>
     <head>
         <title>Filament Settings Database</title>
+        <meta name="google-site-verification" content="Z7SA16tBCKR9ckuoLUKjwHXx6nuNz8otXZpknU_OxKY" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
     </head>
